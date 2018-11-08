@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/name.js"></script>
+</head>
+<body>
+    <div class="mainContent">
+        <canvas id="myCanvas"></canvas><br>
+        <input type="text" id="name" value="陈醉">
+        <input type="button" class="btn" onclick="start()" value="生成">
+        <!-- <img src="./images/1.jpg" id="pic" alt=""> -->
+        <span class="text">kidd</span>
+    </div>
+</body>
+<script>
+    let cas = document.getElementById("myCanvas");
+    let cts = cas.getContext("2d");
+    let button = document.getElementById("button");
+    let ipt = document.getElementById("name");
+    let text = document.getElementsByClassName('text');
+    let value = text[0].innerText;
+    cas.width = 1000;
+    cas.height = 500;
+    cts.textAlign ='center';
+    cts.textBaseLine ='middle';
+    cts.font = "200px microsoft yahei";
+    cts.fillStyle = '#aaa';
+    var context = new Context(cts,ipt);
+    console.log(value)
+    function start() {
+        context._begin();
+    }
+</script>
+</html>
